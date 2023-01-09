@@ -3,7 +3,7 @@ import ArtPiecePreview from "../components/ArtPiecePreview";
 import ArtPieces from "../components/ArtPieces";
 import Spotlight from "../components/Spotlight";
 
-export default function Spotlight() {
+export default function Spotlight_() {
   const { data, error, isLoading } = useSWR(
     "https://example-apis.vercel.app/api/art"
   );
