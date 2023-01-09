@@ -38,7 +38,7 @@ Tasks
 - [x] Fetch all art pieces with useSWR in pages/index.js
 - [x] Create the components folder
 - [x] Create the component ArtPieces to render a list
-- [?] ArtPieces props: pieces --> prop: children
+- [ ] ArtPieces props: pieces --> prop: children
 - [x] Create the component ArtPiecePreview
 - [x] ArtPiecePreview props: image, title, artist
 - [x] All acceptance criteria marked with 🖼️ are covered by component testing
@@ -61,7 +61,7 @@ Tasks
 
 - [x] Write function to pick one art piece at random
 - [x] Create the component Spotlight
-- [?] Spotlight props: image, artist --> prop: data
+- [ ] Spotlight props: image, artist --> prop: data
 - [x] All acceptance criteria marked with 🖼️ are covered by component testing
 
 User Story 3: Separate Pages and Navigation Bar
@@ -116,4 +116,4 @@ Tasks
 - [x] Create the page pages/art-pieces/[slug]/index.js that renders ArtPieceDetails
 - [x] Read the query parameter slug from next/router
 - [x] Use the slug to find the art piece to display
-      All acceptance criteria marked with 🖼️ are covered by component testing
+- [ ] All acceptance criteria marked with 🖼️ are covered by component testing
