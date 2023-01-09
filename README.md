@@ -66,7 +66,8 @@ Tasks
 - [ ] Spotlight props: image, artist --> prop: data
 - [x] All acceptance criteria marked with 🖼️ are covered by component testing
 
-User Story 3: Separate Pages and Navigation Bar
+### User Story 3: Separate Pages and Navigation Bar
+
 Value Proposition
 
 As an art enthusiast
