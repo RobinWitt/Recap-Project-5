@@ -17,7 +17,8 @@ You can then use the following commands:
 
 > 💡 This project requires a bundler. You can use `npm run dev` to start the development server. You can then view the project in the browser at `http://localhost:3000`. The Live Preview Extension for Visual Studio Code will **not** work for this project.
 
-User Story 1: List of all Art Pieces
+### User Story 1: List of all Art Pieces
+
 Value Proposition
 
 As an art enthusiast
@@ -43,7 +44,8 @@ Tasks
 - [x] ArtPiecePreview props: image, title, artist
 - [x] All acceptance criteria marked with 🖼️ are covered by component testing
 
-User Story 2: Spotlight Piece
+### User Story 2: Spotlight Piece
+
 Value Proposition
 
 As an art enthusiast
@@ -90,7 +92,8 @@ Tasks
 - [x] Apply the Layout component in pages/\_app.js
 - [ ] All acceptance criteria marked with 🖼️ are covered by component testing
 
-User Story 4: Art Piece Details Page
+### User Story 4: Art Piece Details Page
+
 Value Proposition
 
 As an art enthusiast
