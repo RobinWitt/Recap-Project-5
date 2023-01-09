@@ -1,13 +1,14 @@
-import Image from "next/image";
 import useSWR from "swr";
 import ArtPiecePreview from "../components/ArtPiecePreview";
 import ArtPieces from "../components/ArtPieces";
+import Spotlight from "../components/Spotlight";
 
 export default function HomePage() {
   const { data, error, isLoading } = useSWR(
     "https://example-apis.vercel.app/api/art"
   );
 
+  // handle error and loading state
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
 
@@ -15,7 +16,8 @@ export default function HomePage() {
   if (data)
     return (
       <div>
-        <h1>Hello from Next.js</h1>
+        <h1>Art Gallery</h1>
+        <Spotlight data={data} />
         <ArtPieces>
           {data.map(({ imageSource, name, artist }) => {
             return (
