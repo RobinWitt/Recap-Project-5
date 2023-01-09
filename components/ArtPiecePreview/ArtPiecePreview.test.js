@@ -34,4 +34,10 @@ test("ArtPiecePreview displays all art pieces in a list", () => {
 
   const image = screen.getByRole("img");
   expect(image).toBeInTheDocument();
+
+  const title = screen.getByText("Kunstwerk 1");
+  expect(title).toBeInTheDocument();
+
+  const artist = screen.getByText("Künstler A");
+  expect(artist).toBeInTheDocument();
 });
