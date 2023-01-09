@@ -27,21 +27,21 @@ I want to see a list of all art pieces
 so that I can get an overview of all art pieces.
 Acceptance Criteria
 
-[x] All art pieces are displayed as a list 🖼️
-[x] Each art piece's image is displayed 🖼️
-[x] Each art piece's title is displayed 🖼️
-[x] Each art piece's artist is displayed 🖼️
+- [x] All art pieces are displayed as a list 🖼️
+- [x] Each art piece's image is displayed 🖼️
+- [x] Each art piece's title is displayed 🖼️
+- [x] Each art piece's artist is displayed 🖼️
 
 Tasks
 
-[x] Install the package swr
-[x] Fetch all art pieces with useSWR in pages/index.js
-[x] Create the components folder
-[x] Create the component ArtPieces to render a list
-[?] ArtPieces props: pieces
-[x] Create the component ArtPiecePreview
-[x] ArtPiecePreview props: image, title, artist
-[] All acceptance criteria marked with 🖼️ are covered by component testing
+- [x] Install the package swr
+- [x] Fetch all art pieces with useSWR in pages/index.js
+- [x] Create the components folder
+- [x] Create the component ArtPieces to render a list
+- [?] ArtPieces props: pieces --> prop: children
+- [x] Create the component ArtPiecePreview
+- [x] ArtPiecePreview props: image, title, artist
+- [] All acceptance criteria marked with 🖼️ are covered by component testing
 
 User Story 2: Spotlight Piece
 Value Proposition
@@ -53,16 +53,16 @@ I want to see a spotlight piece
 so that I can get inspirational highlights.
 Acceptance Criteria
 
-    One art piece is picked at random to show as a spotlight piece
-    The art piece image is displayed 🖼️
-    The art piece artist is displayed 🖼️
+- [x] One art piece is picked at random to show as a spotlight piece
+- [x] The art piece image is displayed 🖼️
+- [x] The art piece artist is displayed 🖼️
 
 Tasks
 
-    Write function to pick one art piece at random
-    Create the component Spotlight
-    Spotlight props: image, artist
-    All acceptance criteria marked with 🖼️ are covered by component testing
+- [x] Write function to pick one art piece at random
+- [x] Create the component Spotlight
+- [?] Spotlight props: image, artist --> prop: data
+- [ ] All acceptance criteria marked with 🖼️ are covered by component testing
 
 User Story 3: Separate Pages and Navigation Bar
 Value Proposition
