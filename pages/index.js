@@ -1,35 +1,14 @@
-import useSWR from "swr";
-import ArtPiecePreview from "../components/ArtPiecePreview";
-import ArtPieces from "../components/ArtPieces";
 import Spotlight from "../components/Spotlight";
+import { useAtom } from "jotai";
+import { imageAtom } from "./_app";
 
-export default function Spotlight() {
-  const { data, error, isLoading } = useSWR(
-    "https://example-apis.vercel.app/api/art"
+export default function SpotlightPage() {
+  const [data] = useAtom(imageAtom);
+
+  return (
+    <div>
+      <h1>Art Gallery</h1>
+      <Spotlight data={data} />
+    </div>
   );
-
-  // handle error and loading state
-  if (error) return <div>failed to load</div>;
-  if (isLoading) return <div>loading...</div>;
-
-  // render data
-  if (data)
-    return (
-      <div>
-        <h1>Art Gallery</h1>
-        <Spotlight data={data} />
-        <ArtPieces>
-          {data.map(({ imageSource, name, artist }) => {
-            return (
-              <ArtPiecePreview
-                key={name}
-                image={imageSource}
-                title={name}
-                artist={artist}
-              />
-            );
-          })}
-        </ArtPieces>
-      </div>
-    );
 }

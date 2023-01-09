@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function getRandomNumber(min, max) {
   min = Math.ceil(min);
@@ -12,12 +13,15 @@ export default function Spotlight({ data }) {
   return (
     <>
       <h2>Spotlight:</h2>
-      <Image
-        src={randomImage.imageSource}
-        alt={randomImage.artist}
-        width={240}
-        height={240}
-      />
+      <Link href={`/art-pieces/${randomImage.slug}`}>
+        <Image
+          src={randomImage.imageSource}
+          alt={randomImage.artist}
+          width={240}
+          height={240}
+        />
+      </Link>
+
       <p>{randomImage.artist}</p>
     </>
   );

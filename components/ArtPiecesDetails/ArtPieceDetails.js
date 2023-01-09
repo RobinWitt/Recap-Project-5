@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ArtPieceDetails({ image, title, artist, year, genre }) {
   return (
@@ -11,12 +12,7 @@ export default function ArtPieceDetails({ image, title, artist, year, genre }) {
         <p>{genre}</p>
       </li>
 
-      <button
-        onClick="../ArtPiecePreview/index.js
-    "
-      >
-        Back to Overview
-      </button>
+      <Link href="/art-pieces">Back to all pieces</Link>
     </>
   );
 }

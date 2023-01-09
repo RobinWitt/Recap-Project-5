@@ -1,5 +1,7 @@
 import GlobalStyle from "../styles";
-import { SWRConfig } from "swr";
+import useSWR from "swr";
+import { atom, useAtom } from "jotai";
+import Layout from "../components/Layout";
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -17,13 +19,29 @@ const fetcher = async (url) => {
   return res.json();
 };
 
+export const imageAtom = atom([]);
+
 export default function App({ Component, pageProps }) {
+  const [, setImageData] = useAtom(imageAtom);
+
+  const { data, error, isLoading } = useSWR(
+    "https://example-apis.vercel.app/api/art",
+    fetcher
+  );
+
+  // handle error and loading state
+  if (error) return <div>failed to load</div>;
+  if (isLoading) return <div>loading...</div>;
+
+  // render data
+  if (data) setImageData(data);
+
   return (
     <>
       <GlobalStyle />
-      <SWRConfig value={{ fetcher }}>
+      <Layout>
         <Component {...pageProps} />
-      </SWRConfig>
+      </Layout>
     </>
   );
 }
